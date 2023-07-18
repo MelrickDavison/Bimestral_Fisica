@@ -1,34 +1,41 @@
 
  var temp = document.getElementById("temp")
- var temp1 = document.getElementById("range")
+ var valueRange = document.getElementById("range")
 
- temp1.addEventListener("input", () =>{
-    
-    if(temp1.value == 50){
-        temp.value = temp.value
-    }
-    else if(temp1.value > 50 && temp1.value <= 70){
-        
-        for(let i = temp1.value; temp != 50; i++){
-            temp.value = Number(temp.value) + 1
-        }
-    }
-    else if(temp1.value > 70 && temp1.value <= 100){
-        temp.value = Number(temp.value) + 10
-    }
+ let intervalo;
+ let i = 0;
 
-    else if(temp1.value < 50 && temp1.value >= 30){
-        temp.value = Number(temp.value) - 1
-    }
-    else if(temp1.value >= 0 && temp1.value < 30){
-        temp.value = Number(temp.value) - 10
-    }
-    
- })
-// function temperatura(num) {
-//    temp.value = Number(temp.value) + num
-// }
-
-function temperatura(){
-     
+function incrementarTemp() {
+   temp.value = Number(temp.value) + 1
 }
+
+function decrementarTemp() {
+    if(Number(temp.value) - 1 >= 0 ){
+    temp.value = Number(temp.value) - 1
+    }else{
+        pararTemp()
+    }
+    
+ }
+
+function aumentarTemperatura(){ 
+     intervalo = setInterval(incrementarTemp, 200)
+
+}
+
+function pararTemp(){
+    clearInterval(intervalo);
+    i = 0;
+}
+
+function diminuirTemperatura(){
+
+     intervalo = setInterval(decrementarTemp, 200)
+
+}
+
+
+valueRange.addEventListener("input", ()=>{
+    document.getElementById("pressão").textContent = valueRange.value + " atm"
+})
+
