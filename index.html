@@ -10,20 +10,26 @@
         Simulador de Gases 
     </h1>
 
+    <h2>
+        Temperatura:
+    </h2>
     <p>
-        <input type="number" min="0" disabled id="temp" value= 1>
+        <input type="number" min="0" disabled id="temp"  style="width: 40px;"> K
     </p>
     <p>
-        <input type="button" value="+" onclick="temperatura(1)">
+        <input type="button" value="+"   onmouseover="aumentarTemperatura()" onmouseout="pararTemp()">
     </p>
     <p>
-         <input type="button" value="-" onclick="temperatura(-1)">
+         <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()">
     </p>
-    <p>
-        <input type="range" id="range" >
-    </p>
-    <p>
-        <input type="reset" value="reset">
+
+    <p><h2>
+       Pressão:
+    </h2>
+       <p id="pressão">
+        0 atm
+       </p> 
+       <input id="range" type="range" max="200" value="0">
     </p>
     
 
