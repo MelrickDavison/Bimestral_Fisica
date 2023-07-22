@@ -3,38 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
     <title>Simulador</title>
 </head>
 <body>
-    <h1>
-        Simulador de Gases 
-    </h1>
+    <h1> Simulador de Gases </h1>
 
-    <h2>
-        Temperatura:
-    </h2>
-    <p>
-        <input type="number" min="0" disabled id="temp"  style="width: 40px;"> K
+<div class=group>
+    <div class="temp"> 
+    <p> 
+        <h2>Temperatura:</h2> 
+        <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()" id="menos">
+        <input type="number" min="0" disabled id="temp"  style="width: 100px;"> K
+        <input type="button" value="+"   onmouseover="aumentarTemperatura()" onmouseout="pararTemp()" id="mais">
     </p>
-    <p>
-        <input type="button" value="+"   onmouseover="aumentarTemperatura()" onmouseout="pararTemp()">
-    </p>
-    <p>
-         <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()">
-    </p>
+    </div>
 
-    <p><h2>
-       Pressão:
-    </h2>
-       <p id="pressão">
-        0 atm
-       </p> 
-       <input id="range" type="range" max="200" value="0">
+    <div class="box"></div>
+    <div class="air_bomb"><img src="./bombadear.png" alt=""></div>
+    <br><br><br><br>
+
+    <div class="pres">
+    <p>
+        <h2>Pressão:</h2>
+        <p id="pressão"> 0 atm </p> 
+        <input id="range" type="range" max="200" value="0">
     </p>
+    </div>
+</div>
     
 
-    <script src="function.js">
-
-    </script>
+    <script src="function.js"></script>
 </body>
 </html>
