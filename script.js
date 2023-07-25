@@ -57,3 +57,67 @@ function volume(pressao1,temperatura1,temperatura2){
     return  temperatura2
 
 }
+
+// script.js
+const canvasWidth = 400; // Largura do canvas
+const canvasHeight = 300; // Altura do canvas
+const particles = [];
+const numParticles = 50;
+const particleSize = 10;
+const maxSpeed = 3;
+const minSpeed = 1;
+
+function setup() {
+  createCanvas(canvasWidth, canvasHeight);
+  for (let i = 0; i < numParticles; i++) {
+    particles.push(new Particle(random(width), random(height), random(minSpeed, maxSpeed), random(minSpeed, maxSpeed)));
+  }
+}
+
+function draw() {
+  background(255);
+  for (let i = 0; i < numParticles; i++) {
+    particles[i].update();
+    particles[i].display();
+    particles[i].checkCollision(particles.slice(i + 1));
+  }
+}
+
+class Particle {
+    constructor(x, y, vx, vy) {
+        this.x = x + width / 2;
+        this.y = y + height / 2;
+        this.vx = vx;
+        this.vy = vy;
+        this.color = color(random(255), random(255), random(255));
+      }
+    
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+    
+        // Borda da tela: fazer a partícula voltar para o outro lado da tela
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+      }
+    
+      display() {
+        noStroke();
+        fill(this.color);
+        ellipse(this.x, this.y, particleSize);
+      }
+    
+      checkCollision(otherParticles) {
+        for (let particle of otherParticles) {
+          let dx = this.x - particle.x;
+          let dy = this.y - particle.y;
+          let distance = sqrt(dx * dx + dy * dy);
+          if (distance < particleSize) {
+            this.vx *= -1;
+            this.vy *= -1;
+            particle.vx *= -1;
+            particle.vy *= -1;
+          }
+        }
+      }
+}
