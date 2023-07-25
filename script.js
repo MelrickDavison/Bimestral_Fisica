@@ -85,8 +85,8 @@ function draw() {
 
 class Particle {
     constructor(x, y, vx, vy) {
-        this.x = x + width / 2;
-        this.y = y + height / 2;
+        this.x = x;
+        this.y = y;
         this.vx = vx;
         this.vy = vy;
         this.color = color(random(255), random(255), random(255));
