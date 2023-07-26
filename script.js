@@ -65,11 +65,10 @@ var buttonParticles = document.getElementById("getParticles")
 var canvasWidth = 400; // Largura do canvas
 var canvasHeight = 300; // Altura do canvas
 var particles = [];
-var numParticles = 5;
+var numParticles = 0;
 var particleSize = 10;
 var maxSpeed = 3;
 var minSpeed = 1;
-var num = 0;
 var intervaloParticle = 20;
 
 function setup() {
@@ -130,7 +129,8 @@ buttonParticles.addEventListener("click", ()=>{
 
 
 
-
+numParticles += 5
+  setup();
   console.log(numParticles)
   let intervalo = setInterval(() =>{
     background(255);
@@ -144,12 +144,7 @@ buttonParticles.addEventListener("click", ()=>{
   }, intervaloParticle)
 
 
-buttonParticles.addEventListener("click", ()=>{
-  console.log(particles)
-  num += 5
-  numParticles += 5
- 
-})
+
   //  for (let i = 0; i < numParticles; i++) {
 
   //   particles[i].display();
