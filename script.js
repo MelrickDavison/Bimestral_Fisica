@@ -1,6 +1,6 @@
 var buttonParticles = document.getElementById("getParticles")
 var um = 0;
-
+var pressao = document.getElementById("pressão")
 var temp = document.getElementById("temp")
 var valueRange = document.getElementById("range")
 var pressaoInicial = 1
@@ -11,7 +11,7 @@ function incrementarTemp() {
   let tempInicial = Number(temp.value)
   temp.value = Number(temp.value) + 1
  valueRange.value = pressaoTemp(pressaoInicial, tempInicial, Number(temp.value) + 1)
- console.log("oi")
+ console.log(pressaoTemp(pressaoInicial, tempInicial, Number(temp.value) + 1))
 }
 
 function decrementarTemp() {
@@ -164,6 +164,7 @@ document.getElementById("mais").disabled = false
 um++
 if(um == 1){
   temp.value = 300
+  pressao.value = pressaoInicial
 }
  
 
