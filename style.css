@@ -1,39 +1,87 @@
+:root{
+    --altura-topo: 120px;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    /* display: flex;
-    flex-wrap: wrap; */
-    margin-left: 34%;
-    overflow: hidden;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* margin-left: 34%; */
+    /* overflow: hidden; */
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(45, 81, 173);
     color:aliceblue;
+    border: 2px solid orange;
 }
 
-h1 {
-    text-align: center;
-    justify-content: center;
-    font-size: 50px;
-    margin-left: -22%;
-    border: 3px solid;
-    padding: 5px;
+
+
+.geral{
+    min-height: calc(100% - var(--altura-topo));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 50px; */
+
+    border: 2px solid white;
+}
+
+.topo{
+
     width: 1200px;
+    min-height: var(--altura-topo);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    border: 3px solid;
     border-radius: 8pt;
-    margin-top: 5vh;
-    font-family: 'Bungee Spice', cursive;
-    background: rgb(23, 43, 93);
-    color: white;
     box-shadow: 0 0 30px 0 rgba(230, 230, 230, 0.448);
+    background: rgb(23, 43, 93);
+    
+    
+    border: 2px solid red;
+    
 }
 
-.box {
-    margin-top: -79px;
+.conteudo{
+    display: flex;
+    gap: 16px;
+    border: 2px solid black;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.titulo{
+    /* margin-left: -22%; */
+    /* margin-top: 5vh; */
+    font-family: 'Bungee Spice', cursive;
+    font-size: 50px;
+    color: white;
+}
+
+#canvas-container {
+    /* margin-top: -79px; */
     width: 624px;
     height: 395px;
     background: transparent;
-    position: absolute;
+    /* position: absolute; */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -44,9 +92,9 @@ h1 {
 .air_bomb .air_bomb_buttom img{
     width: 200px;
     height: 200px;
-    position: absolute;
-    margin-top: 7.5%;
-    margin-left: -6.3%;
+    /* position: absolute; */
+    /* margin-top: 7.5%; */
+    /* margin-left: -6.3%; */
     background: transparent;
     border: none;
     transition: all .2s ease-in-out;
@@ -61,8 +109,8 @@ h1 {
 }
 
 .temp {
-    margin-top: 150px;
-    margin-left: 55%;
+    /* margin-top: 150px; */
+    /* margin-left: 55%; */
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -79,7 +127,7 @@ h1 {
     font-size: 30px;
     border: none;
     background: transparent;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     color: rgb(2, 0, 63);
 }
 
@@ -90,7 +138,7 @@ h1 {
     font-size: 20px;
     color: aliceblue;
     width: 300px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .temp #mais:hover {
@@ -103,14 +151,11 @@ h1 {
 
 .pres {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    margin-left: 55%;
+    /* margin-left: 55%; */
 }
 
 
-#canvas-container {
-    margin-bottom: -220px;
-    padding-left: 40px;
-}
+
 
 aside .group-left {
     height: 400px;
