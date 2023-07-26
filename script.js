@@ -11,6 +11,7 @@ function incrementarTemp() {
   let tempInicial = Number(temp.value)
   temp.value = Number(temp.value) + 1
  valueRange.value = pressaoTemp(pressaoInicial, tempInicial, Number(temp.value) + 1)
+ console.log("oi")
 }
 
 function decrementarTemp() {
