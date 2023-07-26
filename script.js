@@ -1,86 +1,85 @@
-function calcularLeiDosGases(pressao1,volume1,temperatura1,pressao2,volume2,temperatura2){
+var buttonParticles = document.getElementById("getParticles")
+
+
+// function calcularLeiDosGases(pressao1,volume1,temperatura1,pressao2,volume2,temperatura2){
 
 
 
-    if(pressao1<=0 || volume1 <= 0 || temperatura1 <= 0||pressao2<=0 || volume2 <= 0 || temperatura2 <= 0){
-        return " OS valorres de pressão, volume e temperatura devem ser positivas"
+//     if(pressao1<=0 || volume1 <= 0 || temperatura1 <= 0||pressao2<=0 || volume2 <= 0 || temperatura2 <= 0){
+//         return " OS valorres de pressão, volume e temperatura devem ser positivas"
 
-    }
-    let lei = pressao1 * volume1/  temperatura1 ==  pressao2 * volume2/  temperatura2
-    return lei 
-}
-let resultado = calcularLeiDosGases(pressao1,volume1,temperatura1,pressao2,volume2,temperatura2)
+//     }
+//     let lei = pressao1 * volume1/  temperatura1 ==  pressao2 * volume2/  temperatura2
+//     return lei 
+// }
+// // let resultado = calcularLeiDosGases(pressao1,volume1,temperatura1,pressao2,volume2,temperatura2)
 
-function pressaoVolume(pressao1,volume1,volume2,){
-
-
-
-    if(pressao1<=0 || volume1 <= 0 || pressao2<=0 || volume2 <= 0 ){
-        return " OS valores de pressão e volume  devem ser positivas"
-
-    }
-    let pressao2 = pressao1 * volume1 /volume2
-    return  pressao2
-}
-
-function pressaoTemp(pressao1,temperatura1,temperatura2){
+// function pressaoVolume(pressao1,volume1,volume2,){
 
 
 
-    if(pressao1<=0 ||  pressao2<=0  ){
-        return " OS valores de pressão devem ser positivas"
+//     if(pressao1<=0 || volume1 <= 0 || pressao2<=0 || volume2 <= 0 ){
+//         return " OS valores de pressão e volume  devem ser positivas"
 
-    }
-    let pressao2 = pressao1 * temperatura2/ temperatura1 
-    return  pressao2
-}
-function volume(pressao1,temperatura1,temperatura2){
+//     }
+//     let pressao2 = pressao1 * volume1 /volume2
+//     return  pressao2
+// }
 
-
-
-    if(pressao1<=0 ||  pressao2<=0  ){
-        return " OS valores de pressão devem ser positivas"
-
-    }
-    let volume2 = pressao1 * temperatura1 / temperatura1  
-    return  volume2
-  }
- function temperatura(temperatura1,volume1,temperatura2,volume2,){
+// function pressaoTemp(pressao1,temperatura1,temperatura2){
 
 
 
-    if( volume1 <= 0 || volume2 <= 0 ){
-        return " OS valores volume  devem ser positivas"
+//     if(pressao1<=0 ||  pressao2<=0  ){
+//         return " OS valores de pressão devem ser positivas"
 
-    }
-    let temperatura2 =  volume2 * temperatura1 / volume1
-    return  temperatura2
+//     }
+//     let pressao2 = pressao1 * temperatura2/ temperatura1 
+//     return  pressao2
+// }
+// function volume(pressao1,temperatura1,temperatura2){
 
-}
+
+
+//     if(pressao1<=0 ||  pressao2<=0  ){
+//         return " OS valores de pressão devem ser positivas"
+
+//     }
+//     let volume2 = pressao1 * temperatura1 / temperatura1  
+//     return  volume2
+//   }
+//  function temperatura(temperatura1,volume1,temperatura2,volume2,){
+
+
+
+//     if( volume1 <= 0 || volume2 <= 0 ){
+//         return " OS valores volume  devem ser positivas"
+
+//     }
+//     let temperatura2 =  volume2 * temperatura1 / volume1
+//     return  temperatura2
+
+// }
 
 // script.js
-const canvasWidth = 400; // Largura do canvas
-const canvasHeight = 300; // Altura do canvas
-const particles = [];
-const numParticles = 50;
-const particleSize = 10;
-const maxSpeed = 3;
-const minSpeed = 1;
+var canvasWidth = 400; // Largura do canvas
+var canvasHeight = 300; // Altura do canvas
+var particles = [];
+var numParticles = 5;
+var particleSize = 10;
+var maxSpeed = 3;
+var minSpeed = 1;
+var num = 0
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
-  for (let i = 0; i < numParticles; i++) {
+  for (let i = particles.length; i < numParticles; i++) {
     particles.push(new Particle(random(width), random(height), random(minSpeed, maxSpeed), random(minSpeed, maxSpeed)));
-  }
+   }
 }
 
 function draw() {
-  background(255);
-  for (let i = 0; i < numParticles; i++) {
-    particles[i].update();
-    particles[i].display();
-    particles[i].checkCollision(particles.slice(i + 1));
-  }
+ 
 }
 
 class Particle {
@@ -121,3 +120,45 @@ class Particle {
         }
       }
 }
+
+function getParticles(num){
+  
+}
+
+buttonParticles.addEventListener("click", ()=>{
+
+
+
+
+  console.log(numParticles)
+  let intervalo = setInterval(() =>{
+    background(255);
+    for (let i = 0; i < numParticles; i++) {
+      particles[i].update();
+      particles[i].display();
+      particles[i].checkCollision(particles.slice(i + 1));
+    }
+
+ 
+  }, 20)
+
+
+buttonParticles.addEventListener("click", ()=>{
+  console.log(particles)
+  num += 5
+  numParticles += 5
+ 
+})
+  //  for (let i = 0; i < numParticles; i++) {
+
+  //   particles[i].display();
+  
+  // }
+})
+
+// function moverMolecula(){
+//   console.log("click")
+//   for (let i = 0; i < numParticles; i++) {
+//     particles[i].update();  
+//   }
+// }
