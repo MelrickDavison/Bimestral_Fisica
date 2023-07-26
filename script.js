@@ -69,7 +69,8 @@ var numParticles = 5;
 var particleSize = 10;
 var maxSpeed = 3;
 var minSpeed = 1;
-var num = 0
+var num = 0;
+var intervaloParticle = 20;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
@@ -140,7 +141,7 @@ buttonParticles.addEventListener("click", ()=>{
     }
 
  
-  }, 20)
+  }, intervaloParticle)
 
 
 buttonParticles.addEventListener("click", ()=>{
