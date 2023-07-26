@@ -74,7 +74,7 @@ var intervaloParticle = 20;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
-  for (let i = particles.length; i < numParticles; i++) {
+  for (let i = 0; i < numParticles; i++) {
     particles.push(new Particle(random(width), random(height), random(minSpeed, maxSpeed), random(minSpeed, maxSpeed)));
    }
 }
@@ -134,7 +134,7 @@ buttonParticles.addEventListener("click", ()=>{
   console.log(numParticles)
   let intervalo = setInterval(() =>{
     background(255);
-    for (let i = 0; i < numParticles; i++) {
+    for (let i = 0; i < particles.length; i++) {
       particles[i].update();
       particles[i].display();
       particles[i].checkCollision(particles.slice(i + 1));
