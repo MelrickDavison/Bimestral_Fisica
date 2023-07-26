@@ -129,7 +129,7 @@ buttonParticles.addEventListener("click", ()=>{
 
 
 
-numParticles += 5
+numParticles = 5
   setup();
   console.log(numParticles)
   let intervalo = setInterval(() =>{
