@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,13 +15,14 @@
     <link rel="stylesheet" href="./style.css">
     <title>Simulador</title>
 </head>
+
 <body>
     <div class="topo">
         <h1 class="titulo"> Simulador de Gases </h1>
     </div>
     <div class="geral">
-        
-        
+
+
         <div class="conteudo">
 
             <div id="canvas-container">
@@ -30,43 +32,40 @@
 
             <div class="formulario">
 
-                <div class="temp"> 
-                
-                    <h2>Temperatura:</h2> 
-                    <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()" id="menos">
-                    <input type="number" min="0" disabled id="temp"  style="width: 100px;"> K
-                    <input type="button" value="+"   onmouseover="aumentarTemperatura()" onmouseout="pararTemp()" id="mais">
-                
+                <div class="temp">
+
+                    <h2>Temperatura:</h2>
+                    <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()"
+                        id="menos" disabled>
+                    <input type="number" min="0" disabled id="temp" style="width: 100px;"> K
+                    <input type="button" value="+" onmouseover="aumentarTemperatura()" onmouseout="pararTemp()"
+                        id="mais" disabled>
+
                 </div>
 
                 <div class="pres">
                     <p>
-                        <h2>Pressão:</h2>
-                        <p id="pressão"> 0 atm </p> 
-                        <input id="range" type="range" max="200" value="0">
+                    <h2>Pressão:</h2>
+                    <p id="pressão"> 0 atm </p>
+                    <input id="range" type="range" max="200" value="0" disabled>
                     </p>
                 </div>
 
                 <div class="air_bomb">
-                    <button id="getParticles" onclick=mostrarParticulas() type="button" class="air_bomb_buttom">
+                    <button id="getParticles" type="button" class="air_bomb_buttom" id="getParticles">
                         <img src="./bombadear.png" alt="">
                     </button>
                 </div>
             </div>
 
-   
+
+        </div>
+
+
+
     </div>
-   
 
 
-    </div>
-    
 
 
-    <script src="function.js"></script>
-
-
-    <aside class="group-left"></aside>
-</body>
 </html>
-

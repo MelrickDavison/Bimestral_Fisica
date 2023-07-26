@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,37 +15,46 @@
     <link rel="stylesheet" href="./style.css">
     <title>Simulador</title>
 </head>
-<body >
+
+<body>
     <h1> Simulador de Gases </h1>
 
-<div class=group>
-    <div class="temp"> 
-  
-       
-        <h2>Temperatura:</h2> 
-        <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()" id="menos" disabled>
-        <input type="number" min="0" disabled id="temp"  style="width: 100px;"> K
-        <input type="button" value="+"   onmouseover="aumentarTemperatura()" onmouseout="pararTemp()" id="mais" disabled>
-    </p>
+    <div class=group>
+        <h2>
+            Volume:
+        </h2>
+        <input type="number" id="volume" value="0" disabled>
+        <div class="temp">
+
+
+            <h2>Temperatura:</h2>
+            <input type="button" value="-" onmouseover="diminuirTemperatura()" onmouseout="pararTemp()" id="menos"
+                disabled>
+            <input type="number" min="0" disabled id="temp" style="width: 100px;"> K
+            <input type="button" value="+" onmouseover="aumentarTemperatura()" onmouseout="pararTemp()" id="mais"
+                disabled>
+            </p>
+        </div>
+
+        <div class="box"></div>
+        <div class="air_bomb"><button type="button" class="air_bomb_buttom" id="getParticles"><img src="./bombadear.png"
+                    alt=""></button></div>
+        <br><br><br>
+
+        <div class="pres">
+            <p>
+            <h2>Pressão:</h2>
+            <p id="pressão"> 0 atm </p>
+            <input id="range" disabled type="range" max="10" value="0">
+            </p>
+        </div>
     </div>
 
-    <div class="box"></div>
-    <div class="air_bomb"><button type="button"  class="air_bomb_buttom" id="getParticles"><img src="./bombadear.png" alt=""></button></div>
-    <br><br><br>
-
-    <div class="pres">
-    <p>
-        <h2>Pressão:</h2>
-        <p id="pressão"> 0 atm </p> 
-        <input id="range" disabled type="range" max="200" value="0">
-    </p>
+    <div id="canvas-container">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script src="./script.js"></script>
     </div>
-</div>
     
-<div id="canvas-container">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="./script.js"></script>
-</div>
-
 </body>
+
 </html>
