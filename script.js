@@ -44,12 +44,12 @@ function volume(pressao1,temperatura1,temperatura2){
     }
     let volume2 = pressao1 * temperatura1 / temperatura1  
     return  volume2
-
+  }
  function temperatura(temperatura1,volume1,temperatura2,volume2,){
 
 
 
-    if(| volume1 <= 0 || volume2 <= 0 ){
+    if( volume1 <= 0 || volume2 <= 0 ){
         return " OS valores volume  devem ser positivas"
 
     }
