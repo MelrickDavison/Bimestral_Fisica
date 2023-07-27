@@ -1,100 +1,53 @@
-:root{
-    --altura-topo: 120px;
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* margin-left: 34%; */
-    /* overflow: hidden; */
-    height: 100vh;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex;
+    flex-wrap: wrap; */
+    overflow: hidden;
     background-color: rgb(45, 81, 173);
     color:aliceblue;
-    border: 2px solid orange;
+    margin-left: 35%;
 }
 
-
-
-.geral{
-    min-height: calc(100% - var(--altura-topo));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    /* gap: 50px; */
-
-    border: 2px solid white;
-}
-
-.topo{
-
-    width: 1200px;
-    min-height: var(--altura-topo);
-
-    display: flex;
+h1 {
+    margin-top: 20px;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    
-    
-    
+    font-size: 40px;
     border: 3px solid;
+    padding: 5px;
+    margin-bottom: 10%;
+    width: 700px;
     border-radius: 8pt;
-    box-shadow: 0 0 30px 0 rgba(230, 230, 230, 0.448);
-    background: rgb(23, 43, 93);
-    
-    
-    border: 2px solid red;
-    
-}
-
-.conteudo{
-    display: flex;
-    gap: 16px;
-    border: 2px solid black;
-}
-
-.formulario {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.titulo{
-    /* margin-left: -22%; */
-    /* margin-top: 5vh; */
+    margin-left: -120px;
+    box-shadow: 0px 0px 25px 0 rgb(130, 166, 255) ;
     font-family: 'Bungee Spice', cursive;
-    font-size: 50px;
+    background: rgb(23, 43, 93);
     color: white;
 }
 
-#canvas-container {
-    /* margin-top: -79px; */
-    width: 624px;
-    height: 395px;
+/* .box {
+    margin-top: -60px;
+    width: 400px;
+    height: 300px;
     background: transparent;
-    /* position: absolute; */
+    position: absolute;
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin-left: 38%;
     border: 4px solid rgb(47, 47, 47);
-    box-shadow: 5px 5px 5px 0 rgba(49, 49, 49, 0.394);
-}
+} */
 
 .air_bomb .air_bomb_buttom img{
     width: 200px;
     height: 200px;
-    /* position: absolute; */
-    /* margin-top: 7.5%; */
-    /* margin-left: -6.3%; */
+    margin-left: 415px;
+    position: absolute;
+    margin-top: 8%;
     background: transparent;
     border: none;
     transition: all .2s ease-in-out;
@@ -109,16 +62,16 @@ body {
 }
 
 .temp {
-    /* margin-top: 150px; */
-    /* margin-left: 55%; */
+    margin-top: 40px;
+    margin-left: 30px;
     font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
 
 .temp #mais {
     font-size: 30px;
     border: none;
     background: transparent;
-    /* margin-left: -240%; */
     margin-right: 10px;
     color: rgb(2, 0, 63);
 }
@@ -127,7 +80,7 @@ body {
     font-size: 30px;
     border: none;
     background: transparent;
-    /* margin-left: 10px; */
+    margin-left: 10px;
     color: rgb(2, 0, 63);
 }
 
@@ -137,8 +90,11 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 20px;
     color: aliceblue;
-    width: 300px;
-    /* margin-top: 10px; */
+    background-color: rgb(67, 209, 89);
+    border-radius: 7px;
+    width: 350px;
+    margin-top: 10px;
+    padding-left: 7px;
 }
 
 .temp #mais:hover {
@@ -151,16 +107,41 @@ body {
 
 .pres {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    /* margin-left: 55%; */
+    margin-left: 30px;
 }
 
-
-
-
-aside .group-left {
-    height: 400px;
-    width: 200px;
-    background-color: brown;
-    /* margin-left: 100px; */
+.vol {
+    padding-top: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin-left: 30px;
+    margin-top: 40px;
 }
 
+#volume {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+    padding: 2px;
+    background-color: rgb(67, 209, 89);
+    border: none;
+    width: 130px;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding-left: 7px;
+}
+
+.group {
+    margin-top: -8%;
+    width: 300px;
+    height: 330px;
+    background: rgb(0, 180, 27);
+    border-top-right-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin-left: -540px;
+    box-shadow: 0px 4px 5px 5px rgba(0, 24, 86, 0.605);
+}
+
+#canvas-container {
+    margin-bottom: -220px;
+    padding-left: 40px;
+  }
