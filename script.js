@@ -90,8 +90,8 @@ function volume(pressaoInicial, temperaturaInicial, temperaturaFinal) {
 
 
 // script.js
-var canvasWidth = 400; // Largura do canvas
-var canvasHeight = 300; // Altura do canvas
+var canvasWidth = 500; // Largura do canvas
+var canvasHeight = 400; // Altura do canvas
 var particles = [];
 var numParticles = 0;
 var particleSize = 10;
@@ -107,7 +107,7 @@ function setup() {
 }
 
 function draw() {
-  background(80);
+  background(23, 43, 93);
   for (let i = 0; i < particles.length; i++) {
     particles[i].update();
     particles[i].display();
